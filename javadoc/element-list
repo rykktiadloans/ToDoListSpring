@@ -1,0 +1,6 @@
+com.todolist.core
+com.todolist.core.config
+com.todolist.core.controllers
+com.todolist.core.model
+com.todolist.core.repository
+com.todolist.core.services

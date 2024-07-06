@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.todolist.core"},{"l":"com.todolist.core.config"},{"l":"com.todolist.core.controllers"},{"l":"com.todolist.core.model"},{"l":"com.todolist.core.repository"},{"l":"com.todolist.core.services"}];updateSearchResults();
