@@ -1,0 +1,32 @@
+* {
+}
+
+#list {
+    margin: 15px 10px;
+}
+
+#list-name-div {
+    margin: 10px;
+}
+
+#add-item {
+    margin-left: 15px;
+}
+
+.list-item {
+    margin: 5px;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: grey
+}
+input:focus {
+  border-color: DodgerBlue;
+  outline: 1px dotted #000
+}
+
+main {
+    padding: 10px;
+}

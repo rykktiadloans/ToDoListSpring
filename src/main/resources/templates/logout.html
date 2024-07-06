@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link th:href="@{/styles/login.css}" rel="stylesheet">
+    <link th:href="@{/styles/header.css}" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <div th:insert="~{fragments/header :: #header}"></div>
+</nav>
+<main>
+    <div id="container">
+        <h2>You sure you want to log out?</h2>
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">Log out</button>
+        </form>
+    </div>
+</main>
+</body>
+</html>

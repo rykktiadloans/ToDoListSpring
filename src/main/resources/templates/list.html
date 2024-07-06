@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link th:href="@{/styles/list.css}" rel="stylesheet">
+    <link th:href="@{/styles/header.css}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div th:insert="~{fragments/header :: #header}"></div>
+    </header>
+    <main>
+        <form action="#" th:action="@{/save}" th:object="${listModel}" method="post">
+            <button type="submit">Save</button>
+            <input type="hidden" th:field="*{id}">
+            <div id="list-name-div">
+                <label for="list-name">Name</label>
+                <input id="list-name" th:field="*{listName}" type="text" required>
+            </div>
+            <div id="list">
+                <th:block th:each="item,i : *{itemList}">
+                    <div class="list-item" th:attr="data-index=${i.index}"  >
+                        <button th:attr="onclick=|deleteButtonHandler(${i.index})|" class="remove-item" type="button">-</button>
+                        <input type="checkbox" th:field="*{checkedList}" th:value="${i.index}">
+                        <input type="text" th:field="*{itemList[__${i.index}__]}" required>
+                    </div>
+                </th:block>
+            </div>
+            <button type="button" id="add-item">+</button>
+        </form>
+
+    </main>
+    <script th:src="@{/js/listScript.js}"></script>
+</body>
+</html>

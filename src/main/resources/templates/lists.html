@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lists</title>
+    <link th:href="@{/styles/lists.css}" rel="stylesheet">
+    <link th:href="@{/styles/header.css}" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div th:insert="~{fragments/header :: #header}"></div>
+    </nav>
+    <main>
+        <h2><a th:href="@{/new}">Create a new list</a></h2>
+        <div id="lists">
+            <a th:href="@{/list/} + ${item.id}" th:each="item : ${lists}">
+                <div class="list">
+                    <p th:text="${item.listName}"></p>
+                </div>
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+#header {
+    box-sizing: border-box;
+    display:flex;
+    padding: 10px;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    background-color: #d2d2d2;
+    gap: 30px;
+}
+div#to-do > a{
+    font: 40px Arial, sans-serif !important;
+    color: #008cd0;
+}
+#header > div {
+    height: 100%;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    gap: 20px;
+}
+#header a {
+    color: inherit;
+    text-decoration: none;
+    font: 20px Arial, sans-serif;
+    text-align: center;
+}
