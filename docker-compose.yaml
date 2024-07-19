@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  to-do-list:
+    build: .
+    restart: no
+    container_name: to-do-list
+    ports:
+      - 8080:8080
+    networks:
+      - to-do-list-net
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - spring.datasource.url=jdbc:postgresql://db:5432/postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
+    depends_on:
+      - db
+
+    volumes:
+      - .m2:/root/.m2
+
+  db:
+    image: "postgres:16.3"
+    container_name: db
+    restart: no
+    ports:
+      - 5433:5433
+    networks:
+      - to-do-list-net
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
+networks:
+  to-do-list-net:

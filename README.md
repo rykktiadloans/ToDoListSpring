@@ -8,6 +8,10 @@ The app allows the users to create accounts on the website, under which they can
 2. Get the Maven dependencies
 3. Compile
 
+## How to run (Docker way)
+1. run `./mvnw package`
+2. run `docker compose up`
+
 ## Technologies used
 - Java
 - Spring

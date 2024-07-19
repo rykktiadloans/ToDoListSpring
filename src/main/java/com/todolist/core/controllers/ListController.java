@@ -94,7 +94,7 @@ public class ListController {
             return "redirect:/login";
         }
         model.addAttribute("lists", userModel.get().getLists());
-        return "/lists";
+        return "lists";
 
     }
 
