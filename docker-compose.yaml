@@ -2,7 +2,7 @@ version: "3.7"
 services:
   to-do-list:
     build: .
-    restart: no
+    restart: 'no'
     container_name: to-do-list
     ports:
       - 8080:8080
@@ -23,7 +23,7 @@ services:
   db:
     image: "postgres:16.3"
     container_name: db
-    restart: no
+    restart: 'no'
     ports:
       - 5433:5433
     networks:
